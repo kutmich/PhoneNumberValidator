@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PhoneNumberValidator.Application\PhoneNumberValidator.Application.csproj" />
+    <ProjectReference Include="..\PhoneNumberValidator.DAL\PhoneNumberValidator.DAL.csproj" />
+    <ProjectReference Include="..\PhoneNumberValidator.Entities\PhoneNumberValidator.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

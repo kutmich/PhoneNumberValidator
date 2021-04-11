@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneNumberValidator.Web", "PhoneNumberValidator.Web\PhoneNumberValidator.Web.csproj", "{D3CD293A-8A8D-4220-883F-758537B8EF3D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneNumberValidator.Entities", "PhoneNumberValidator.Entities\PhoneNumberValidator.Entities.csproj", "{79DD6A0F-3D19-464F-9611-587F5DCB3738}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneNumberValidator.DAL", "PhoneNumberValidator.DAL\PhoneNumberValidator.DAL.csproj", "{21E4CAE8-BCCA-404E-B346-DDCB44B962F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneNumberValidator.Application", "PhoneNumberValidator.Application\PhoneNumberValidator.Application.csproj", "{ACAD2D16-D5E9-4FE3-9955-0C70DF89CE0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3CD293A-8A8D-4220-883F-758537B8EF3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3CD293A-8A8D-4220-883F-758537B8EF3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3CD293A-8A8D-4220-883F-758537B8EF3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3CD293A-8A8D-4220-883F-758537B8EF3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79DD6A0F-3D19-464F-9611-587F5DCB3738}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79DD6A0F-3D19-464F-9611-587F5DCB3738}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79DD6A0F-3D19-464F-9611-587F5DCB3738}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79DD6A0F-3D19-464F-9611-587F5DCB3738}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21E4CAE8-BCCA-404E-B346-DDCB44B962F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21E4CAE8-BCCA-404E-B346-DDCB44B962F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21E4CAE8-BCCA-404E-B346-DDCB44B962F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21E4CAE8-BCCA-404E-B346-DDCB44B962F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACAD2D16-D5E9-4FE3-9955-0C70DF89CE0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACAD2D16-D5E9-4FE3-9955-0C70DF89CE0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACAD2D16-D5E9-4FE3-9955-0C70DF89CE0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACAD2D16-D5E9-4FE3-9955-0C70DF89CE0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4C1A678-4CD9-42C5-B931-799FD921B32C}
+	EndGlobalSection
+EndGlobal
