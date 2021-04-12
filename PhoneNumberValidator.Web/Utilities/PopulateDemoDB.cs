@@ -37,7 +37,6 @@ namespace PhoneNumberValidator.Web.Utilities
 
         private void PopulateNationalDoNotCallList()
         {
-            try {
                 var items = new List<NationalDoNotCall>();
                 items.Add(item: new NationalDoNotCall() { PhoneNo = "5321695487", Persons = { new Person() { Name = "Amthony Smith", IsMember = true }, new Person() { Name = "Sue Smith", IsMember = true } } });//assume that can be one to many realtion
                 items.Add(new NationalDoNotCall() { PhoneNo = "5749875634" });
@@ -45,11 +44,6 @@ namespace PhoneNumberValidator.Web.Utilities
 
                 _nationalDoNotCallRepository.AddRangeAsync(items);
                 _nationalDoNotCallRepository.SaveAsync();
-            } 
-            catch(Exception e)
-            {
-                var t = e;
-            }
       
         }
 

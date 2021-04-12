@@ -24,16 +24,14 @@ namespace PhoneNumberValidator.Web.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<PhoneNumberValidationResponse> ValidateAsync(String phoneNumber)
+        public async Task<PhoneNumberValidationResponse> ValidateAsync(string phoneNumber)
         {
             try
             {
-                
                 if(!Helper.CheckFormat(phoneNumber))
                     return new PhoneNumberValidationResponse(null, false, "Wrong format number.");
 
-                phoneNumber = Helper.ExtractNumbers(phoneNumber);// in case if number (xxx)xxxxxx
+                phoneNumber = Helper.FilterNonNumeric(phoneNumber);// in case if number (xxx)xxxxxx, +1xxxxxxxxx
                 return await _service.ValidateAsync(phoneNumber);
 
             }
@@ -41,6 +39,29 @@ namespace PhoneNumberValidator.Web.Controllers
             {
                 _logger.LogInformation(ex.InnerException.ToString());  //write to file or database
                 return new PhoneNumberValidationResponse(null, false, "An error occurred, contact administrator.");
+            }
+        }
+
+        [HttpGet]
+        public async Task<List<PhoneNumberValidationResponse>> ValidateManyAsync(List<string> phoneNumbers)
+        {
+            try
+            {
+                var badFormatNumbers = Helper.FilterByCorruptFormat(phoneNumbers);
+
+                if (badFormatNumbers.Count > 0) 
+                    return Helper.BadFormatResponse(phoneNumbers);
+
+                phoneNumbers = Helper.FilterNonNumeric(phoneNumbers);// in case if number (xxx)xxxxxx, +1xxxxxxxxx
+
+                return await _service.ValidateAsync(phoneNumbers);
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogInformation(ex.InnerException.ToString());  //write to file or database
+                //return new PhoneNumberValidationResponse(null, false, "An error occurred, contact administrator.");
+                throw ex;
             }
         }
     }

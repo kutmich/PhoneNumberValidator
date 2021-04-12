@@ -36,16 +36,27 @@ namespace PhoneNumberValidator.Application.Services.Contracts
 
                 return new PhoneNumberValidationResponse(number, false, "Number is not valide for calling");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                throw ex;
             }
         }
 
-        public async Task<List<PhoneNumberValidationResponse>> ValidateAsync(List<string> number)
+        public async Task<List<PhoneNumberValidationResponse>> ValidateAsync(List<string> numbers)
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<PhoneNumberValidationResponse> result = new List<PhoneNumberValidationResponse>();
+                foreach (var number in numbers)
+                {
+                    result.Add(await ValidateAsync(number));
+                }
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }
