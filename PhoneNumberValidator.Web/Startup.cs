@@ -32,7 +32,7 @@ namespace PhoneNumberValidator.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            #region Adding data repositories to ioc container
+            #region Adding repositories to ioc container
             services.AddDbContext<DAL.ValidatorDBContext>(opt => opt.UseInMemoryDatabase("DemoDB"));
             services.AddScoped<INationalDoNotCallRepository, NationalDoNotCallRepository>();         
             services.AddScoped<IInternalDoNotCallRepository, InternalDoNotCallRepository>();
