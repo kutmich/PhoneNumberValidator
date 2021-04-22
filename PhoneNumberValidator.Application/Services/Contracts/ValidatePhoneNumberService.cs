@@ -3,7 +3,6 @@ using PhoneNumberValidator.Application.Services.Interfaces;
 using PhoneNumberValidator.DAL.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace PhoneNumberValidator.Application.Services.Contracts
@@ -23,15 +22,15 @@ namespace PhoneNumberValidator.Application.Services.Contracts
             try
             {
                 var existsInInternalList = await _internalRepo.ExistsAsync(number);
-                if (existsInInternalList) 
+                if (existsInInternalList)
                     return new PhoneNumberValidationResponse(number, false, "Number is not valide for calling");
 
                 var existsInNationalList = await _nationalRepo.ExistsAsync(number);
                 if (!existsInNationalList)
                     return new PhoneNumberValidationResponse(number, true, "Number is valide for calling");
 
-                var existsInNationalListAndMember = await _nationalRepo.IsMemberAndNationalDoNotCallAsync(number);  
-                if(existsInNationalListAndMember)
+                var existsInNationalListAndMember = await _nationalRepo.IsMemberAndNationalDoNotCallAsync(number);
+                if (existsInNationalListAndMember)
                     return new PhoneNumberValidationResponse(number, true, "Number is valide for calling");
 
                 return new PhoneNumberValidationResponse(number, false, "Number is not valide for calling");
