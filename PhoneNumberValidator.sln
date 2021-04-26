@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneNumberValidator.Entiti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneNumberValidator.DAL", "PhoneNumberValidator.DAL\PhoneNumberValidator.DAL.csproj", "{21E4CAE8-BCCA-404E-B346-DDCB44B962F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneNumberValidator.Application", "PhoneNumberValidator.Application\PhoneNumberValidator.Application.csproj", "{ACAD2D16-D5E9-4FE3-9955-0C70DF89CE0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneNumberValidator.Application", "PhoneNumberValidator.Application\PhoneNumberValidator.Application.csproj", "{ACAD2D16-D5E9-4FE3-9955-0C70DF89CE0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneNumberValidator.Tests", "PhoneNumberValidator.Tests\PhoneNumberValidator.Tests.csproj", "{B4C6B012-CDAB-41C7-8483-80B1D5E04365}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{ACAD2D16-D5E9-4FE3-9955-0C70DF89CE0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACAD2D16-D5E9-4FE3-9955-0C70DF89CE0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACAD2D16-D5E9-4FE3-9955-0C70DF89CE0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4C6B012-CDAB-41C7-8483-80B1D5E04365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4C6B012-CDAB-41C7-8483-80B1D5E04365}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4C6B012-CDAB-41C7-8483-80B1D5E04365}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4C6B012-CDAB-41C7-8483-80B1D5E04365}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
