@@ -24,15 +24,9 @@ namespace PhoneNumberValidator.Processor
 
         [Fact]
         public void ShouldSavePhoneNum() {
-            try
-            {
-                _repositoryInternalMock.Setup(x => x.GetAllAsync());
-            }
-            catch (Exception e)
-            {
 
-                throw e;
-            }
+                _repositoryInternalMock.Setup(x => x.GetAllAsync());
+
         }
     }
 }
