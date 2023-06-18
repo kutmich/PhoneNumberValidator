@@ -68,8 +68,6 @@ namespace PhoneNumberValidator.Web
                                services.GetService<IPersonRepository>());
             t.start();
 
-            //var t4 =  services.GetService<INationalDoNotCallRepository>().GetAllAsync().;
-
             app.UseHttpsRedirection();
 
             app.UseRouting();

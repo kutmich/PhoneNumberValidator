@@ -19,4 +19,6 @@
     <ProjectReference Include="..\PhoneNumberValidator.Entities\PhoneNumberValidator.Entities.csproj" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="https://datahubproject.io/schemas/datahub_ingestion_schema.json" /></VisualStudio></ProjectExtensions>
+
 </Project>

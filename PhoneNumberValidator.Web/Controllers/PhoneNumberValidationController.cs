@@ -16,6 +16,7 @@ namespace PhoneNumberValidator.Web.Controllers
 {
 
     [ApiController]
+    [Route("phone")]
     public class PhoneNumberValidationController : ControllerBase
     {
         private readonly ILogger<PhoneNumberValidationController> _logger;
@@ -26,7 +27,7 @@ namespace PhoneNumberValidator.Web.Controllers
         }
 
         [HttpGet]
-        [Route("CheckNumberValidity")]
+        [Route("CheckNumber")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IActionResult> ValidateAsync(string phoneNumber)
         {
